@@ -1,0 +1,44 @@
+* {
+    font-family: "Noto Sans Symbols 2", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    padding: 5px;
+    margin: 5px;
+}
+
+#webname {
+    background-color: rgb(184, 138, 184);
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgb(177, 69, 177);
+    margin-right: 15px;
+    font-weight: bold;
+  }
+
+th {
+    padding: 12px;
+    background-color: purple;
+    width: fit-content;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: rgb(249, 231, 249);
+}
+
+form *{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+input[type="submit"] {
+    background-color: rgb(158, 40, 158);
+    border: none; 
+    border-radius: 12px;
+    color: white; 
+}
+
+
