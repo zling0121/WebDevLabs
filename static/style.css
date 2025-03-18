@@ -42,3 +42,22 @@ input[type="submit"] {
 }
 
 
+#FavList {
+    display: none; 
+}
+
+#SeeMoreBTN {
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#formMessage {
+    color: red;
+    font-weight: bold;
+  }
+

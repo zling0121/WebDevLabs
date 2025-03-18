@@ -9,8 +9,11 @@
     <title>Zoey Ling</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="static/style.css">
-    <script src="./static/script.js" defer></script></head>
-<body style="font-family: Arial">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./static/script.js" defer></script>
+
+</head>
+<body onload="addYear(); greetingFunc()">
     <header style="color:white">
         <h1 id="webname">Ziyue(Zoey) Ling</h1>
         <nav>
@@ -25,10 +28,17 @@
     <div class="main">
         <h2 id="greeting"></h2>
         <img src="static/zoeypic.jpg" alt="Profile picture" width="108" height="150">
-        <p id="intro">Welcome to my personal website. You can learn more about my educational backgrounds and projects. Please contact me!</p>
+    </div>
+    <div class="classA">
+        <span id="shortIntro">Welcome to my personal website. You can learn more about my educational backgrounds and projects. I am a first-year majoring in Information Systems at Carnegie Mellon University. </span>
+        <span id="longIntro" style="display:none;">
+            <br> Some of my skills include python, Java, R Studio,and HTML. In my free time, I enjoy playing squash, snowboarding, dancing, and hanging out with my friends.
+        </span>
+        <span id="readMore" style="cursor:pointer; color:rgb(165, 110, 165);">read more...</span>
+        <span id="readLess" style="display:none; cursor:pointer; color:rgb(165, 110, 165)">read less</span>
     </div>
     <footer>
-        <p>&copy; 2025 designed and coded by Zoey Ling.</p>
+        <p id="copyYear">Designed and coded by Zoey Ling &copy;</p>
     </footer>
 </body>
 </html>

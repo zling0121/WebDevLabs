@@ -63,8 +63,52 @@ function greetingFunc(){
     }
 }
 
-if (window.location.href.includes("index.html")) {
-    window.onload = greetingFunc; 
-} else {
-    console.log("Not on index.html page.");
+function addYear() {
+    var d = new Date();
+    var y=d.getFullYear();
+    var E=document.getElementById("copyYear");
+    E.innerHTML+=y;
+    console.log("year added")
 }
+
+function showList() {
+    var list = document.getElementById("FavList");
+    list.style.display = "block"; 
+    var button = document.getElementById("SeeMoreBTN");
+    button.style.display = "none"; 
+}
+
+$(document).ready(function() {
+    $("#readMore").click(function() {
+        $("#longIntro").show();
+        $("#readLess").show();
+        $("#readMore").hide();
+    });
+
+    $("#readLess").click(function() {
+        $("#longIntro").hide();
+        $("#readLess").hide();
+        $("#readMore").show();
+    });
+});
+
+function validateForm() {
+    var nameField = document.getElementById("name");
+    var emailField = document.getElementById("email");
+    var commentField = document.getElementById("comments");
+    var validationMessage = document.getElementById("validationMessage");
+    var formMessage = document.getElementById("formMessage");
+  
+    if (!nameField.checkValidity()) {
+        formMessage.innerHTML = "Please give me a valid name";
+    }
+    else if (!emailField.checkValidity()) {
+        formMessage.innerHTML = "Please give me a valid email";
+    }
+    else if (!commentField.checkValidity()) {
+        formMessage.innerHTML = "Please comment";
+    }
+    else {
+        validationMessage.innerHTML = "";
+    }
+  }
