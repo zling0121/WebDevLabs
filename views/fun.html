@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Your name">
-    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
-    <meta name="description" content="Your name professional website">
-    <title>Zoey Ling</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="stylesheet" href="../static/style.css">
-    <script src="../static/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Your name" />
+  <meta name="keywords" content="Carnegie Mellon University, Information Systems" />
+  <meta name="description" content="Your name professional website" />
+  <title>Zoey Ling</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="../static/style.css" />
+  <script src="../static/script.js" defer></script>
+  <style>
+    /* Optional inline styles for testing Flexbox */
+    /* Remove or move to style.css if desired */
+  </style>
 </head>
 <body onload="addYear()">
-    <header style="color:white">
-        <h1 id="webname">Ziyue(Zoey) Ling</h1>
-        <nav>
-            <ul>
-                <a class="nav-link"  href="../index.html">About</a>
-                <a class="nav-link"  href="../views/cv.html">Resume</a>
-                <a class="nav-link"  href="../views/contact.html">Contact</a>
-                <a class="nav-link"  href="../views/fun.html">Interest</a>
-            </ul>
-        </nav>
-    </header>
-    <div class="main">
-        <h2>Things I love to do for fun</h2>
-        <nav>
-            <button id="SeeMoreBTN" onclick="showList()">Click to see...</button>
-            <ul id="FavList">
-                <li>Squash</li>
-                <li>Snowboarding</li>
-                <li>Dance</li>
-                <li>Boba</li>
-            </ul>
-        </nav>
+  <header style="color:white">
+    <h1 id="webname">Ziyue(Zoey) Ling</h1>
+    <nav>
+      <ul>
+        <a class="nav-link" href="../index.html">About</a>
+        <a class="nav-link" href="../views/cv.html">Resume</a>
+        <a class="nav-link" href="../views/contact.html">Contact</a>
+        <a class="nav-link" href="../views/fun.html">Interest</a>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="mainLayout">
+    <div id="item1">
+      <h2>Things I love to do for fun</h2>
+      <!-- <button id="SeeMoreBTN" onclick="showList()">Click to see...</button> -->
+      <nav>
+        <ul id="FavList">
+          <li>Squash</li>
+          <li>Snowboarding</li>
+          <li>Dance</li>
+          <li>Boba</li>
+        </ul>
+      </nav>
     </div>
-    <footer>
-        <p id="copyYear">Designed and coded by Zoey Ling &copy</p>
-    </footer>
+    <div id="item2">
+      <img src="../static/fun-image.jpg" alt="Fun Activity" class="funIMG" style="width:150px; border-radius:100%;">
+    </div>
+    <div id="item3">
+      <iframe class="youtubeVideo" src="https://www.youtube.com/embed/kGiaKTHmfyE" title="SIDE HITS. The people's favorite." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="item4">
+      <div class="container">
+        <h2>Need Some Advice?</h2>
+        <p id="adviceText">Click the button to get a random piece of advice!</p>
+        <button onclick="getAdvice()">Get Advice</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p id="copyYear">Designed and coded by Zoey Ling &copy;</p>
+  </footer>
 </body>
 </html>
