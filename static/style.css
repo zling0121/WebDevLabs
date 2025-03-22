@@ -42,9 +42,9 @@ input[type="submit"] {
 }
 
 
-#FavList {
+/* #FavList {
     display: none; 
-}
+} */
 
 #SeeMoreBTN {
     background-color: purple;
@@ -60,6 +60,20 @@ input[type="submit"] {
     color: red;
     font-weight: bold;
   }
+
+.funIMG {
+    border-radius: 100%;
+    width: 300px;
+    height: auto;
+}
+
+
+.youtubeVideo {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: none;
+}
 
 .mainLayout {
     display: flex;
@@ -80,3 +94,25 @@ input[type="submit"] {
     padding: 10px;
   }
   
+  .container {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #f9f9f9;
+}
+
+.container button {
+    background-color: rgb(158, 40, 158);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.container button:hover {
+    background-color: rgb(140, 35, 140);
+}

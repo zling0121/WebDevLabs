@@ -71,12 +71,12 @@ function addYear() {
     console.log("year added")
 }
 
-function showList() {
-    var list = document.getElementById("FavList");
-    list.style.display = "block"; 
-    var button = document.getElementById("SeeMoreBTN");
-    button.style.display = "none"; 
-}
+// function showList() {
+//     var list = document.getElementById("FavList");
+//     list.style.display = "block"; 
+//     var button = document.getElementById("SeeMoreBTN");
+//     button.style.display = "none"; 
+// }
 
 $(document).ready(function() {
     $("#readMore").click(function() {
