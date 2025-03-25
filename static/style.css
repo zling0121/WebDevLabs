@@ -15,6 +15,16 @@
     color: rgb(177, 69, 177);
     margin-right: 15px;
     font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: darkmagenta; 
+  }
+  
+  .nav-link.active {
+    color: crimson;  
+    border-bottom: 2px solid crimson; 
   }
 
 th {
@@ -28,7 +38,7 @@ tr:nth-child(even) {
     background-color: rgb(249, 231, 249);
 }
 
-form *{
+form * {
     display: block;
     margin: auto;
     text-align: center;
@@ -36,11 +46,10 @@ form *{
 
 input[type="submit"] {
     background-color: rgb(158, 40, 158);
-    border: none; 
+    border: none;
     border-radius: 12px;
-    color: white; 
+    color: white;
 }
-
 
 /* #FavList {
     display: none; 
@@ -59,14 +68,13 @@ input[type="submit"] {
 #formMessage {
     color: red;
     font-weight: bold;
-  }
+}
 
 .funIMG {
     border-radius: 100%;
     width: 300px;
     height: auto;
 }
-
 
 .youtubeVideo {
     width: 100%;
@@ -75,31 +83,12 @@ input[type="submit"] {
     border: none;
 }
 
-.mainLayout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    align-items: center;     
-    gap: 20px;               
-    padding: 20px;
-  }
-  
-  #item1, 
-  #item2, 
-  #item3, 
-  #item4 {
-    flex: 1 1 300px; 
-    max-width: 600px;
-    box-sizing: border-box;
-    padding: 10px;
-  }
-  
-  .container {
+.container {
     display: inline-block;
     padding: 20px;
     border-radius: 10%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; 
 }
 
 .container button {
@@ -110,9 +99,49 @@ input[type="submit"] {
     padding: 10px 20px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 10px; 
 }
 
 .container button:hover {
     background-color: rgb(140, 35, 140);
+}
+
+.mainLayout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;     
+    gap: 20px;              
+    padding: 20px;
+}
+  
+#item1, 
+#item2, 
+#item3, 
+#item4 {
+    flex: 1 1 300px; 
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+.navigation i.fas.fa-bars {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation ul {
+        display: none;
+    }
+  
+    .navigation i.fas.fa-bars {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 }
