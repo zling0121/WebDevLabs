@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-rows: auto auto auto auto auto;
+    
+    grid-template-areas:
+      "header header"
+      "navigation navigation"
+      "mainimg maincontent"
+      "bottomcontent bottomcontent"
+      "footer footer";
+    gap: 1rem; 
+    min-height: 100vh; 
+  }
+  
+  .header {
+    grid-area: header;
+    background-color: #f8c5d0; 
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .navigation {
+    grid-area: navigation;
+    background-color: #ffe6ea; 
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .mainimg {
+    grid-area: mainimg;
+    background-color: #ffa980; 
+    padding: 1rem;
+  }
+  
+  .maincontent {
+    grid-area: maincontent;
+    background-color: #fffacc; 
+    padding: 1rem;
+  }
+  
+  .bottomcontent {
+    grid-area: bottomcontent;
+    background-color: #b6f8a5; 
+    padding: 1rem;
+  }
+  
+  .footer {
+    grid-area: footer;
+    background-color: #dadada; 
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .navigation ul {
+    list-style-type: none;
+  }
+  
+  .navigation li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+  
+  .navigation a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto;
+      
+      grid-template-areas:
+        "header"
+        "navigation"
+        "mainimg"
+        "maincontent"
+        "bottomcontent"
+        "footer";
+    }
+  
+    .navigation ul {
+      display: block;
+      text-align: center;
+    }
+  
+    .navigation li {
+      display: block;
+      margin: 0.5rem 0;
+    }
+  }
+
+.header h1 {
+    animation: pulse 3s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      color: #333;
+    }
+    50% {
+      transform: scale(1.1);
+      color: rgb(180, 107, 180);
+    }
+    100% {
+      transform: scale(1);
+      color: #333;
+    }
+  }
+  
+  
