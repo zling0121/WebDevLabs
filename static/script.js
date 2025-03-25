@@ -125,3 +125,38 @@ function validateForm() {
             document.getElementById("adviceText").innerText = "Sorry, something went wrong.";
         });
 }
+
+function toggleMenu() {
+    let navList = document.querySelector('.navigation ul');
+    if (navList.style.display === "block") {
+        navList.style.display = "none";
+    } else {
+        navList.style.display = "block";
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.navigation i.fas.fa-bars');
+    if (hamburger) {
+        hamburger.addEventListener('click', toggleMenu);
+    }
+});
+
+function highlightActiveNav() {
+    const currentPath = window.location.pathname.split('/').pop();
+    
+    const navLinks = document.querySelectorAll('.navigation a.nav-link');
+    
+    navLinks.forEach(link => {
+      const linkPath = link.getAttribute('href');
+      
+      if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+        link.classList.add('active');
+      }
+    });
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    highlightActiveNav();
+  });
+  
